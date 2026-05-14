@@ -122,18 +122,3 @@ Bootstrap CI computed with n=1,000 resamples (seed=42).
 3. No evaluation of injection through **structured data formats** (JSON invoices, tabular RFQs)
 4. **Economic impact quantification** of successful attacks is missing from security literature
 
----
-
-## Citation
-
-If you use this code, please cite:
-
-```bibtex
-@misc{bidpoison2025,
-  title  = {BidPoison: Prompt Injection Attacks and Defenses in AI-Powered
-            Supply Chain Procurement Agents},
-  author = {[Author Names]},
-  year   = {2025},
-  url    = {https://github.com/SonHaXuan/BidPoison}
-}
-```
