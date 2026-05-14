@@ -1,0 +1,1314 @@
+{
+  "experiment": "exp8_defense_chain_ablation",
+  "n_scenarios": 65,
+  "n_records_per_config": 1300,
+  "model_profile": "ensemble",
+  "component_order": [
+    "PolicyRail",
+    "InputSanitization",
+    "SemanticSimilarity",
+    "OutputValidation"
+  ],
+  "results_by_config_code": {
+    "": {
+      "config": "Naive",
+      "components": [],
+      "component_codes": [],
+      "overall_asr": 0.2654,
+      "overall_dsr": 0.7346,
+      "sdr": 0.0,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {}
+        },
+        "T2_context_manip": {
+          "asr": 0.2346,
+          "dsr": 0.7654,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {}
+        },
+        "T3_role_hijack": {
+          "asr": 0.45,
+          "dsr": 0.55,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {}
+        },
+        "T4_completion_attack": {
+          "asr": 0.1692,
+          "dsr": 0.8308,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {}
+        },
+        "T5_gcg_style": {
+          "asr": 0.3269,
+          "dsr": 0.6731,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {}
+        }
+      },
+      "component_flag_rates": {}
+    },
+    "P": {
+      "config": "PolicyRail",
+      "components": [
+        "PolicyRail"
+      ],
+      "component_codes": [
+        "P"
+      ],
+      "overall_asr": 0.0631,
+      "overall_dsr": 0.9369,
+      "sdr": 0.6,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6
+      }
+    },
+    "I": {
+      "config": "InputSanitization",
+      "components": [
+        "InputSanitization"
+      ],
+      "component_codes": [
+        "I"
+      ],
+      "overall_asr": 0.1585,
+      "overall_dsr": 0.8415,
+      "sdr": 0.4,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "sdr": 0.25,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.25,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.3615,
+          "dsr": 0.6385,
+          "sdr": 0.25,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.25,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 1.0
+          }
+        }
+      },
+      "component_flag_rates": {
+        "InputSanitization": 0.4
+      }
+    },
+    "S": {
+      "config": "SemanticSimilarity",
+      "components": [
+        "SemanticSimilarity"
+      ],
+      "component_codes": [
+        "S"
+      ],
+      "overall_asr": 0.2562,
+      "overall_dsr": 0.7438,
+      "sdr": 0.0415,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0115,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0115
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.2269,
+          "dsr": 0.7731,
+          "sdr": 0.0731,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0731
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.4269,
+          "dsr": 0.5731,
+          "sdr": 0.0462,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0462
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1577,
+          "dsr": 0.8423,
+          "sdr": 0.0462,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0462
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.3231,
+          "dsr": 0.6769,
+          "sdr": 0.0308,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0308
+          }
+        }
+      },
+      "component_flag_rates": {
+        "SemanticSimilarity": 0.0415
+      }
+    },
+    "O": {
+      "config": "OutputValidation",
+      "components": [
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "O"
+      ],
+      "overall_asr": 0.2215,
+      "overall_dsr": 0.7785,
+      "sdr": 0.0485,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "sdr": 0.0385,
+          "n": 260,
+          "component_flag_rates": {
+            "OutputValidation": 0.0385
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1962,
+          "dsr": 0.8038,
+          "sdr": 0.0423,
+          "n": 260,
+          "component_flag_rates": {
+            "OutputValidation": 0.0423
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.3731,
+          "dsr": 0.6269,
+          "sdr": 0.0808,
+          "n": 260,
+          "component_flag_rates": {
+            "OutputValidation": 0.0808
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0308,
+          "n": 260,
+          "component_flag_rates": {
+            "OutputValidation": 0.0308
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.2769,
+          "dsr": 0.7231,
+          "sdr": 0.05,
+          "n": 260,
+          "component_flag_rates": {
+            "OutputValidation": 0.05
+          }
+        }
+      },
+      "component_flag_rates": {
+        "OutputValidation": 0.0485
+      }
+    },
+    "PI": {
+      "config": "PolicyRail+InputSanitization",
+      "components": [
+        "PolicyRail",
+        "InputSanitization"
+      ],
+      "component_codes": [
+        "P",
+        "I"
+      ],
+      "overall_asr": 0.0631,
+      "overall_dsr": 0.9369,
+      "sdr": 0.6,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.75
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "InputSanitization": 0.15
+      }
+    },
+    "PS": {
+      "config": "PolicyRail+SemanticSimilarity",
+      "components": [
+        "PolicyRail",
+        "SemanticSimilarity"
+      ],
+      "component_codes": [
+        "P",
+        "S"
+      ],
+      "overall_asr": 0.0608,
+      "overall_dsr": 0.9392,
+      "sdr": 0.6208,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "SemanticSimilarity": 0.0308
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1769,
+          "dsr": 0.8231,
+          "sdr": 0.0615,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "SemanticSimilarity": 0.0615
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "SemanticSimilarity": 0.0385
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1269,
+          "dsr": 0.8731,
+          "sdr": 0.0423,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "SemanticSimilarity": 0.0423
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "SemanticSimilarity": 0.0308
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "SemanticSimilarity": 0.0408
+      }
+    },
+    "PO": {
+      "config": "PolicyRail+OutputValidation",
+      "components": [
+        "PolicyRail",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "P",
+        "O"
+      ],
+      "overall_asr": 0.0538,
+      "overall_dsr": 0.9462,
+      "sdr": 0.6131,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "OutputValidation": 0.0154
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.15,
+          "dsr": 0.85,
+          "sdr": 0.0385,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "OutputValidation": 0.0731
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1192,
+          "dsr": 0.8808,
+          "sdr": 0.0269,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "OutputValidation": 0.0269
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "OutputValidation": 0.0577
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "OutputValidation": 0.0423
+      }
+    },
+    "IS": {
+      "config": "InputSanitization+SemanticSimilarity",
+      "components": [
+        "InputSanitization",
+        "SemanticSimilarity"
+      ],
+      "component_codes": [
+        "I",
+        "S"
+      ],
+      "overall_asr": 0.1523,
+      "overall_dsr": 0.8477,
+      "sdr": 0.4262,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "sdr": 0.2577,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0154
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1769,
+          "dsr": 0.8231,
+          "sdr": 0.3038,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0615
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.3423,
+          "dsr": 0.6577,
+          "sdr": 0.2846,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0423
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1269,
+          "dsr": 0.8731,
+          "sdr": 0.2846,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0423
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 1.0,
+            "SemanticSimilarity": 0.0308
+          }
+        }
+      },
+      "component_flag_rates": {
+        "InputSanitization": 0.4,
+        "SemanticSimilarity": 0.0385
+      }
+    },
+    "IO": {
+      "config": "InputSanitization+OutputValidation",
+      "components": [
+        "InputSanitization",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "I",
+        "O"
+      ],
+      "overall_asr": 0.1315,
+      "overall_dsr": 0.8685,
+      "sdr": 0.4315,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0923,
+          "dsr": 0.9077,
+          "sdr": 0.2808,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "OutputValidation": 0.0346
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.15,
+          "dsr": 0.85,
+          "sdr": 0.2846,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.2962,
+          "dsr": 0.7038,
+          "sdr": 0.3192,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "OutputValidation": 0.0731
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1192,
+          "dsr": 0.8808,
+          "sdr": 0.2731,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "OutputValidation": 0.0269
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 1.0,
+            "OutputValidation": 0.0154
+          }
+        }
+      },
+      "component_flag_rates": {
+        "InputSanitization": 0.4,
+        "OutputValidation": 0.0377
+      }
+    },
+    "SO": {
+      "config": "SemanticSimilarity+OutputValidation",
+      "components": [
+        "SemanticSimilarity",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "S",
+        "O"
+      ],
+      "overall_asr": 0.2123,
+      "overall_dsr": 0.7877,
+      "sdr": 0.09,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "sdr": 0.05,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0115,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1885,
+          "dsr": 0.8115,
+          "sdr": 0.1154,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0731,
+            "OutputValidation": 0.0423
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.35,
+          "dsr": 0.65,
+          "sdr": 0.1269,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0462,
+            "OutputValidation": 0.0808
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0769,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0462,
+            "OutputValidation": 0.0308
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.2731,
+          "dsr": 0.7269,
+          "sdr": 0.0808,
+          "n": 260,
+          "component_flag_rates": {
+            "SemanticSimilarity": 0.0308,
+            "OutputValidation": 0.05
+          }
+        }
+      },
+      "component_flag_rates": {
+        "SemanticSimilarity": 0.0415,
+        "OutputValidation": 0.0485
+      }
+    },
+    "PIS": {
+      "config": "PolicyRail+InputSanitization+SemanticSimilarity",
+      "components": [
+        "PolicyRail",
+        "InputSanitization",
+        "SemanticSimilarity"
+      ],
+      "component_codes": [
+        "P",
+        "I",
+        "S"
+      ],
+      "overall_asr": 0.0608,
+      "overall_dsr": 0.9392,
+      "sdr": 0.6208,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0308
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1769,
+          "dsr": 0.8231,
+          "sdr": 0.0615,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0615
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0385
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1269,
+          "dsr": 0.8731,
+          "sdr": 0.0423,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0423
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.75,
+            "SemanticSimilarity": 0.0308
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "InputSanitization": 0.15,
+        "SemanticSimilarity": 0.0408
+      }
+    },
+    "PIO": {
+      "config": "PolicyRail+InputSanitization+OutputValidation",
+      "components": [
+        "PolicyRail",
+        "InputSanitization",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "P",
+        "I",
+        "O"
+      ],
+      "overall_asr": 0.0538,
+      "overall_dsr": 0.9462,
+      "sdr": 0.6131,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0,
+            "OutputValidation": 0.0154
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.15,
+          "dsr": 0.85,
+          "sdr": 0.0385,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0,
+            "OutputValidation": 0.0731
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1192,
+          "dsr": 0.8808,
+          "sdr": 0.0269,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0,
+            "OutputValidation": 0.0269
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.75,
+            "OutputValidation": 0.0154
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "InputSanitization": 0.15,
+        "OutputValidation": 0.0338
+      }
+    },
+    "PSO": {
+      "config": "PolicyRail+SemanticSimilarity+OutputValidation",
+      "components": [
+        "PolicyRail",
+        "SemanticSimilarity",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "P",
+        "S",
+        "O"
+      ],
+      "overall_asr": 0.0515,
+      "overall_dsr": 0.9485,
+      "sdr": 0.6338,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "SemanticSimilarity": 0.0308,
+            "OutputValidation": 0.0154
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.1,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "SemanticSimilarity": 0.0615,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "SemanticSimilarity": 0.0385,
+            "OutputValidation": 0.0731
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1115,
+          "dsr": 0.8885,
+          "sdr": 0.0692,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "SemanticSimilarity": 0.0423,
+            "OutputValidation": 0.0269
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "SemanticSimilarity": 0.0308,
+            "OutputValidation": 0.0577
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "SemanticSimilarity": 0.0408,
+        "OutputValidation": 0.0423
+      }
+    },
+    "ISO": {
+      "config": "InputSanitization+SemanticSimilarity+OutputValidation",
+      "components": [
+        "InputSanitization",
+        "SemanticSimilarity",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "I",
+        "S",
+        "O"
+      ],
+      "overall_asr": 0.1254,
+      "overall_dsr": 0.8746,
+      "sdr": 0.4577,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0923,
+          "dsr": 0.9077,
+          "sdr": 0.2885,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0154,
+            "OutputValidation": 0.0346
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.3385,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0615,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.2769,
+          "dsr": 0.7231,
+          "sdr": 0.3538,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0423,
+            "OutputValidation": 0.0731
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1115,
+          "dsr": 0.8885,
+          "sdr": 0.3077,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 0.25,
+            "SemanticSimilarity": 0.0423,
+            "OutputValidation": 0.0269
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "InputSanitization": 1.0,
+            "SemanticSimilarity": 0.0308,
+            "OutputValidation": 0.0154
+          }
+        }
+      },
+      "component_flag_rates": {
+        "InputSanitization": 0.4,
+        "SemanticSimilarity": 0.0385,
+        "OutputValidation": 0.0377
+      }
+    },
+    "PISO": {
+      "config": "PolicyRail+InputSanitization+SemanticSimilarity+OutputValidation",
+      "components": [
+        "PolicyRail",
+        "InputSanitization",
+        "SemanticSimilarity",
+        "OutputValidation"
+      ],
+      "component_codes": [
+        "P",
+        "I",
+        "S",
+        "O"
+      ],
+      "overall_asr": 0.0515,
+      "overall_dsr": 0.9485,
+      "sdr": 0.6338,
+      "n": 1300,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0308,
+            "OutputValidation": 0.0154
+          }
+        },
+        "T2_context_manip": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.1,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0615,
+            "OutputValidation": 0.0385
+          }
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0385,
+            "OutputValidation": 0.0731
+          }
+        },
+        "T4_completion_attack": {
+          "asr": 0.1115,
+          "dsr": 0.8885,
+          "sdr": 0.0692,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 0.0,
+            "InputSanitization": 0.0,
+            "SemanticSimilarity": 0.0423,
+            "OutputValidation": 0.0269
+          }
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260,
+          "component_flag_rates": {
+            "PolicyRail": 1.0,
+            "InputSanitization": 0.75,
+            "SemanticSimilarity": 0.0308,
+            "OutputValidation": 0.0154
+          }
+        }
+      },
+      "component_flag_rates": {
+        "PolicyRail": 0.6,
+        "InputSanitization": 0.15,
+        "SemanticSimilarity": 0.0408,
+        "OutputValidation": 0.0338
+      }
+    }
+  },
+  "ranked_configs": [
+    {
+      "rank": 1,
+      "config": "PolicyRail+InputSanitization+SemanticSimilarity+OutputValidation",
+      "overall_asr": 0.0515,
+      "sdr": 0.6338,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 2,
+      "config": "PolicyRail+SemanticSimilarity+OutputValidation",
+      "overall_asr": 0.0515,
+      "sdr": 0.6338,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 3,
+      "config": "PolicyRail+InputSanitization+OutputValidation",
+      "overall_asr": 0.0538,
+      "sdr": 0.6131,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 4,
+      "config": "PolicyRail+OutputValidation",
+      "overall_asr": 0.0538,
+      "sdr": 0.6131,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 5,
+      "config": "PolicyRail+InputSanitization+SemanticSimilarity",
+      "overall_asr": 0.0608,
+      "sdr": 0.6208,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 6,
+      "config": "PolicyRail+SemanticSimilarity",
+      "overall_asr": 0.0608,
+      "sdr": 0.6208,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 7,
+      "config": "PolicyRail",
+      "overall_asr": 0.0631,
+      "sdr": 0.6,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 8,
+      "config": "PolicyRail+InputSanitization",
+      "overall_asr": 0.0631,
+      "sdr": 0.6,
+      "t1_asr": 0.0,
+      "t3_asr": 0.0
+    },
+    {
+      "rank": 9,
+      "config": "InputSanitization+SemanticSimilarity+OutputValidation",
+      "overall_asr": 0.1254,
+      "sdr": 0.4577,
+      "t1_asr": 0.0923,
+      "t3_asr": 0.2769
+    },
+    {
+      "rank": 10,
+      "config": "InputSanitization+OutputValidation",
+      "overall_asr": 0.1315,
+      "sdr": 0.4315,
+      "t1_asr": 0.0923,
+      "t3_asr": 0.2962
+    },
+    {
+      "rank": 11,
+      "config": "InputSanitization+SemanticSimilarity",
+      "overall_asr": 0.1523,
+      "sdr": 0.4262,
+      "t1_asr": 0.1154,
+      "t3_asr": 0.3423
+    },
+    {
+      "rank": 12,
+      "config": "InputSanitization",
+      "overall_asr": 0.1585,
+      "sdr": 0.4,
+      "t1_asr": 0.1154,
+      "t3_asr": 0.3615
+    },
+    {
+      "rank": 13,
+      "config": "SemanticSimilarity+OutputValidation",
+      "overall_asr": 0.2123,
+      "sdr": 0.09,
+      "t1_asr": 0.1154,
+      "t3_asr": 0.35
+    },
+    {
+      "rank": 14,
+      "config": "OutputValidation",
+      "overall_asr": 0.2215,
+      "sdr": 0.0485,
+      "t1_asr": 0.1154,
+      "t3_asr": 0.3731
+    },
+    {
+      "rank": 15,
+      "config": "SemanticSimilarity",
+      "overall_asr": 0.2562,
+      "sdr": 0.0415,
+      "t1_asr": 0.1462,
+      "t3_asr": 0.4269
+    },
+    {
+      "rank": 16,
+      "config": "Naive",
+      "overall_asr": 0.2654,
+      "sdr": 0.0,
+      "t1_asr": 0.1462,
+      "t3_asr": 0.45
+    }
+  ],
+  "interaction_analysis": {
+    "naive_asr": 0.2654,
+    "single_component_reductions": {
+      "PolicyRail": 0.2023,
+      "InputSanitization": 0.1069,
+      "SemanticSimilarity": 0.0092,
+      "OutputValidation": 0.0439
+    },
+    "pair_interactions_without_policy": {
+      "InputSanitization+SemanticSimilarity": {
+        "observed_reduction": 0.1131,
+        "additive_single_component_reduction": 0.1161,
+        "interaction_delta": -0.003
+      },
+      "InputSanitization+OutputValidation": {
+        "observed_reduction": 0.1339,
+        "additive_single_component_reduction": 0.1508,
+        "interaction_delta": -0.0169
+      },
+      "SemanticSimilarity+OutputValidation": {
+        "observed_reduction": 0.0531,
+        "additive_single_component_reduction": 0.0531,
+        "interaction_delta": -0.0
+      }
+    },
+    "chain_without_policy": {
+      "asr": 0.1254,
+      "reduction_vs_naive": 0.14,
+      "best_non_policy_subset": "InputSanitization+OutputValidation",
+      "best_non_policy_subset_asr": 0.1315,
+      "delta_vs_best_subset_asr": -0.0061
+    },
+    "policy_rail_composition": {
+      "policy_asr": 0.0631,
+      "policy_plus_chain_asr": 0.0515,
+      "delta_policy_plus_chain_minus_policy": -0.0116,
+      "policy_t1_asr": 0.0,
+      "chain_without_policy_t1_asr": 0.0923,
+      "policy_plus_chain_t1_asr": 0.0
+    }
+  },
+  "runtime_s": 4.51
+}

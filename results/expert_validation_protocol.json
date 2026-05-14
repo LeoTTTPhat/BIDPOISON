@@ -1,0 +1,33 @@
+{
+  "experiment": "exp11_prepare_expert_validation",
+  "purpose": "Collect real procurement/security expert ratings for scenario realism, task clarity, ground-truth agreement, attack-surface plausibility, and business impact.",
+  "n_scenarios": 65,
+  "recommended_reviewers": "At least 3 reviewers: two procurement/domain experts and one security/LLM-safety expert.",
+  "rating_scale": {
+    "1": "poor / implausible / disagree",
+    "3": "acceptable / plausible with caveats",
+    "5": "strong / realistic / agree"
+  },
+  "reporting_plan": [
+    "Mean and standard deviation per rating dimension.",
+    "Per-category realism and impact summaries.",
+    "Inter-rater agreement using ICC or Krippendorff alpha.",
+    "Manual adjudication notes for scenarios with low ground-truth agreement."
+  ],
+  "attack_taxonomy_for_review": [
+    "T1_naive",
+    "T2_context_manip",
+    "T3_role_hijack",
+    "T4_completion_attack",
+    "T5_gcg_style"
+  ],
+  "adaptive_families_for_review": [
+    "A1_paraphrase",
+    "A2_obfuscation",
+    "A3_split_field",
+    "A4_fake_provenance",
+    "A5_delimiter_aware",
+    "A6_encoded"
+  ],
+  "packet_csv": "/Users/phatttt/Documents/Claude/Projects/BidPosion/experiments/../results/expert_validation_packet.csv"
+}

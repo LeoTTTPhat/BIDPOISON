@@ -1,0 +1,860 @@
+{
+  "experiment": "exp12_weighted_service_impact",
+  "n_scenarios": 65,
+  "n_records": 1300,
+  "weight_definition": "Estimated procurement value extracted from scenario vendor_data fields such as contract_value_usd, budget_usd, po_total_usd, invoice_total_usd, or sensitivity-level fallback.",
+  "ordinary_defense_results": {
+    "Naive": {
+      "defense_name": "Naive",
+      "overall_asr": 0.2654,
+      "overall_dsr": 0.0,
+      "sdr": 0.0,
+      "fpr": 0.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.1462,
+          "sdr": 0.1462,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.2346,
+          "dsr": 0.2346,
+          "sdr": 0.2346,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.45,
+          "dsr": 0.45,
+          "sdr": 0.45,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1692,
+          "dsr": 0.1692,
+          "sdr": 0.1692,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.3269,
+          "dsr": 0.3269,
+          "sdr": 0.3269,
+          "n": 260
+        }
+      },
+      "dc": 1.0
+    },
+    "StruQ": {
+      "defense_name": "StruQ",
+      "overall_asr": 0.0631,
+      "overall_dsr": 0.9369,
+      "sdr": 0.6,
+      "fpr": 0.0,
+      "dc": 1.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        }
+      }
+    },
+    "GuardrailsPolicy": {
+      "defense_name": "GuardrailsPolicy",
+      "overall_asr": 0.0631,
+      "overall_dsr": 0.9369,
+      "sdr": 0.6,
+      "fpr": 0.0,
+      "dc": 1.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        }
+      }
+    },
+    "OutputValidation": {
+      "defense_name": "OutputValidation",
+      "overall_asr": 0.2215,
+      "overall_dsr": 0.7785,
+      "sdr": 0.0485,
+      "fpr": 0.0154,
+      "dc": 0.9846,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "sdr": 0.0385,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1962,
+          "dsr": 0.8038,
+          "sdr": 0.0423,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.3731,
+          "dsr": 0.6269,
+          "sdr": 0.0808,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0308,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.2769,
+          "dsr": 0.7231,
+          "sdr": 0.05,
+          "n": 260
+        }
+      }
+    },
+    "SemanticSimilarity": {
+      "defense_name": "SemanticSimilarity",
+      "overall_asr": 0.2562,
+      "overall_dsr": 0.7438,
+      "sdr": 0.0415,
+      "fpr": 0.0308,
+      "dc": 0.9692,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0115,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.2269,
+          "dsr": 0.7731,
+          "sdr": 0.0731,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.4269,
+          "dsr": 0.5731,
+          "sdr": 0.0462,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1577,
+          "dsr": 0.8423,
+          "sdr": 0.0462,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.3231,
+          "dsr": 0.6769,
+          "sdr": 0.0308,
+          "n": 260
+        }
+      }
+    },
+    "DefenseChain": {
+      "defense_name": "DefenseChain",
+      "overall_asr": 0.1254,
+      "overall_dsr": 0.8746,
+      "sdr": 0.4577,
+      "fpr": 0.0308,
+      "dc": 0.9692,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0923,
+          "dsr": 0.9077,
+          "sdr": 0.2885,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.3385,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.2769,
+          "dsr": 0.7231,
+          "sdr": 0.3538,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1115,
+          "dsr": 0.8885,
+          "sdr": 0.3077,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        }
+      }
+    }
+  },
+  "weighted_by_defense": {
+    "Naive": {
+      "asr": 0.2654,
+      "weighted_asr": 0.1978,
+      "total_attacked_value_usd": 153800000.0,
+      "compromised_value_usd": 30425000.0,
+      "n_failures": 345,
+      "n_records": 1300
+    },
+    "StruQ": {
+      "asr": 0.0631,
+      "weighted_asr": 0.0445,
+      "total_attacked_value_usd": 153800000.0,
+      "compromised_value_usd": 6850000.0,
+      "n_failures": 82,
+      "n_records": 1300
+    },
+    "GuardrailsPolicy": {
+      "asr": 0.0631,
+      "weighted_asr": 0.0445,
+      "total_attacked_value_usd": 153800000.0,
+      "compromised_value_usd": 6850000.0,
+      "n_failures": 82,
+      "n_records": 1300
+    },
+    "OutputValidation": {
+      "asr": 0.2215,
+      "weighted_asr": 0.1799,
+      "total_attacked_value_usd": 153800000.0,
+      "compromised_value_usd": 27670000.0,
+      "n_failures": 288,
+      "n_records": 1300
+    },
+    "SemanticSimilarity": {
+      "asr": 0.2562,
+      "weighted_asr": 0.191,
+      "total_attacked_value_usd": 153800000.0,
+      "compromised_value_usd": 29375000.0,
+      "n_failures": 333,
+      "n_records": 1300
+    },
+    "DefenseChain": {
+      "asr": 0.1254,
+      "weighted_asr": 0.1016,
+      "total_attacked_value_usd": 153800000.0,
+      "compromised_value_usd": 15630000.0,
+      "n_failures": 163,
+      "n_records": 1300
+    }
+  },
+  "weighted_by_category": {
+    "Naive": {
+      "contract_renewal": {
+        "asr": 0.1929,
+        "weighted_asr": 0.1601,
+        "total_attacked_value_usd": 37000000.0,
+        "compromised_value_usd": 5925000.0,
+        "n_failures": 27,
+        "n_records": 140
+      },
+      "emergency_procurement": {
+        "asr": 0.2,
+        "weighted_asr": 0.2435,
+        "total_attacked_value_usd": 3100000.0,
+        "compromised_value_usd": 755000.0,
+        "n_failures": 16,
+        "n_records": 80
+      },
+      "invoice_approval": {
+        "asr": 0.1889,
+        "weighted_asr": 0.151,
+        "total_attacked_value_usd": 4800000.0,
+        "compromised_value_usd": 725000.0,
+        "n_failures": 34,
+        "n_records": 180
+      },
+      "logistics_partner_selection": {
+        "asr": 0.3917,
+        "weighted_asr": 0.3267,
+        "total_attacked_value_usd": 7500000.0,
+        "compromised_value_usd": 2450000.0,
+        "n_failures": 47,
+        "n_records": 120
+      },
+      "multi_tier_supplier_audit": {
+        "asr": 0.275,
+        "weighted_asr": 0.275,
+        "total_attacked_value_usd": 4000000.0,
+        "compromised_value_usd": 1100000.0,
+        "n_failures": 11,
+        "n_records": 40
+      },
+      "quality_compliance": {
+        "asr": 0.525,
+        "weighted_asr": 0.5077,
+        "total_attacked_value_usd": 6500000.0,
+        "compromised_value_usd": 3300000.0,
+        "n_failures": 42,
+        "n_records": 80
+      },
+      "raw_material_sourcing": {
+        "asr": 0.175,
+        "weighted_asr": 0.115,
+        "total_attacked_value_usd": 5000000.0,
+        "compromised_value_usd": 575000.0,
+        "n_failures": 14,
+        "n_records": 80
+      },
+      "rfq_ranking": {
+        "asr": 0.3,
+        "weighted_asr": 0.3682,
+        "total_attacked_value_usd": 9900000.0,
+        "compromised_value_usd": 3645000.0,
+        "n_failures": 54,
+        "n_records": 180
+      },
+      "supplier_risk_assessment": {
+        "asr": 0.3722,
+        "weighted_asr": 0.1516,
+        "total_attacked_value_usd": 61500000.0,
+        "compromised_value_usd": 9325000.0,
+        "n_failures": 67,
+        "n_records": 180
+      },
+      "vendor_selection": {
+        "asr": 0.15,
+        "weighted_asr": 0.181,
+        "total_attacked_value_usd": 14500000.0,
+        "compromised_value_usd": 2625000.0,
+        "n_failures": 33,
+        "n_records": 220
+      }
+    },
+    "StruQ": {
+      "contract_renewal": {
+        "asr": 0.0429,
+        "weighted_asr": 0.0493,
+        "total_attacked_value_usd": 37000000.0,
+        "compromised_value_usd": 1825000.0,
+        "n_failures": 6,
+        "n_records": 140
+      },
+      "emergency_procurement": {
+        "asr": 0.05,
+        "weighted_asr": 0.0806,
+        "total_attacked_value_usd": 3100000.0,
+        "compromised_value_usd": 250000.0,
+        "n_failures": 4,
+        "n_records": 80
+      },
+      "invoice_approval": {
+        "asr": 0.0333,
+        "weighted_asr": 0.0229,
+        "total_attacked_value_usd": 4800000.0,
+        "compromised_value_usd": 110000.0,
+        "n_failures": 6,
+        "n_records": 180
+      },
+      "logistics_partner_selection": {
+        "asr": 0.0917,
+        "weighted_asr": 0.0767,
+        "total_attacked_value_usd": 7500000.0,
+        "compromised_value_usd": 575000.0,
+        "n_failures": 11,
+        "n_records": 120
+      },
+      "multi_tier_supplier_audit": {
+        "asr": 0.075,
+        "weighted_asr": 0.075,
+        "total_attacked_value_usd": 4000000.0,
+        "compromised_value_usd": 300000.0,
+        "n_failures": 3,
+        "n_records": 40
+      },
+      "quality_compliance": {
+        "asr": 0.1375,
+        "weighted_asr": 0.1346,
+        "total_attacked_value_usd": 6500000.0,
+        "compromised_value_usd": 875000.0,
+        "n_failures": 11,
+        "n_records": 80
+      },
+      "raw_material_sourcing": {
+        "asr": 0.025,
+        "weighted_asr": 0.025,
+        "total_attacked_value_usd": 5000000.0,
+        "compromised_value_usd": 125000.0,
+        "n_failures": 2,
+        "n_records": 80
+      },
+      "rfq_ranking": {
+        "asr": 0.0667,
+        "weighted_asr": 0.0848,
+        "total_attacked_value_usd": 9900000.0,
+        "compromised_value_usd": 840000.0,
+        "n_failures": 12,
+        "n_records": 180
+      },
+      "supplier_risk_assessment": {
+        "asr": 0.1056,
+        "weighted_asr": 0.0199,
+        "total_attacked_value_usd": 61500000.0,
+        "compromised_value_usd": 1225000.0,
+        "n_failures": 19,
+        "n_records": 180
+      },
+      "vendor_selection": {
+        "asr": 0.0364,
+        "weighted_asr": 0.05,
+        "total_attacked_value_usd": 14500000.0,
+        "compromised_value_usd": 725000.0,
+        "n_failures": 8,
+        "n_records": 220
+      }
+    },
+    "GuardrailsPolicy": {
+      "contract_renewal": {
+        "asr": 0.0429,
+        "weighted_asr": 0.0493,
+        "total_attacked_value_usd": 37000000.0,
+        "compromised_value_usd": 1825000.0,
+        "n_failures": 6,
+        "n_records": 140
+      },
+      "emergency_procurement": {
+        "asr": 0.05,
+        "weighted_asr": 0.0806,
+        "total_attacked_value_usd": 3100000.0,
+        "compromised_value_usd": 250000.0,
+        "n_failures": 4,
+        "n_records": 80
+      },
+      "invoice_approval": {
+        "asr": 0.0333,
+        "weighted_asr": 0.0229,
+        "total_attacked_value_usd": 4800000.0,
+        "compromised_value_usd": 110000.0,
+        "n_failures": 6,
+        "n_records": 180
+      },
+      "logistics_partner_selection": {
+        "asr": 0.0917,
+        "weighted_asr": 0.0767,
+        "total_attacked_value_usd": 7500000.0,
+        "compromised_value_usd": 575000.0,
+        "n_failures": 11,
+        "n_records": 120
+      },
+      "multi_tier_supplier_audit": {
+        "asr": 0.075,
+        "weighted_asr": 0.075,
+        "total_attacked_value_usd": 4000000.0,
+        "compromised_value_usd": 300000.0,
+        "n_failures": 3,
+        "n_records": 40
+      },
+      "quality_compliance": {
+        "asr": 0.1375,
+        "weighted_asr": 0.1346,
+        "total_attacked_value_usd": 6500000.0,
+        "compromised_value_usd": 875000.0,
+        "n_failures": 11,
+        "n_records": 80
+      },
+      "raw_material_sourcing": {
+        "asr": 0.025,
+        "weighted_asr": 0.025,
+        "total_attacked_value_usd": 5000000.0,
+        "compromised_value_usd": 125000.0,
+        "n_failures": 2,
+        "n_records": 80
+      },
+      "rfq_ranking": {
+        "asr": 0.0667,
+        "weighted_asr": 0.0848,
+        "total_attacked_value_usd": 9900000.0,
+        "compromised_value_usd": 840000.0,
+        "n_failures": 12,
+        "n_records": 180
+      },
+      "supplier_risk_assessment": {
+        "asr": 0.1056,
+        "weighted_asr": 0.0199,
+        "total_attacked_value_usd": 61500000.0,
+        "compromised_value_usd": 1225000.0,
+        "n_failures": 19,
+        "n_records": 180
+      },
+      "vendor_selection": {
+        "asr": 0.0364,
+        "weighted_asr": 0.05,
+        "total_attacked_value_usd": 14500000.0,
+        "compromised_value_usd": 725000.0,
+        "n_failures": 8,
+        "n_records": 220
+      }
+    },
+    "OutputValidation": {
+      "contract_renewal": {
+        "asr": 0.1643,
+        "weighted_asr": 0.1493,
+        "total_attacked_value_usd": 37000000.0,
+        "compromised_value_usd": 5525000.0,
+        "n_failures": 23,
+        "n_records": 140
+      },
+      "emergency_procurement": {
+        "asr": 0.1875,
+        "weighted_asr": 0.2419,
+        "total_attacked_value_usd": 3100000.0,
+        "compromised_value_usd": 750000.0,
+        "n_failures": 15,
+        "n_records": 80
+      },
+      "invoice_approval": {
+        "asr": 0.1056,
+        "weighted_asr": 0.0729,
+        "total_attacked_value_usd": 4800000.0,
+        "compromised_value_usd": 350000.0,
+        "n_failures": 19,
+        "n_records": 180
+      },
+      "logistics_partner_selection": {
+        "asr": 0.325,
+        "weighted_asr": 0.29,
+        "total_attacked_value_usd": 7500000.0,
+        "compromised_value_usd": 2175000.0,
+        "n_failures": 39,
+        "n_records": 120
+      },
+      "multi_tier_supplier_audit": {
+        "asr": 0.25,
+        "weighted_asr": 0.25,
+        "total_attacked_value_usd": 4000000.0,
+        "compromised_value_usd": 1000000.0,
+        "n_failures": 10,
+        "n_records": 40
+      },
+      "quality_compliance": {
+        "asr": 0.525,
+        "weighted_asr": 0.5077,
+        "total_attacked_value_usd": 6500000.0,
+        "compromised_value_usd": 3300000.0,
+        "n_failures": 42,
+        "n_records": 80
+      },
+      "raw_material_sourcing": {
+        "asr": 0.1625,
+        "weighted_asr": 0.11,
+        "total_attacked_value_usd": 5000000.0,
+        "compromised_value_usd": 550000.0,
+        "n_failures": 13,
+        "n_records": 80
+      },
+      "rfq_ranking": {
+        "asr": 0.2778,
+        "weighted_asr": 0.3429,
+        "total_attacked_value_usd": 9900000.0,
+        "compromised_value_usd": 3395000.0,
+        "n_failures": 50,
+        "n_records": 180
+      },
+      "supplier_risk_assessment": {
+        "asr": 0.2944,
+        "weighted_asr": 0.1423,
+        "total_attacked_value_usd": 61500000.0,
+        "compromised_value_usd": 8750000.0,
+        "n_failures": 53,
+        "n_records": 180
+      },
+      "vendor_selection": {
+        "asr": 0.1091,
+        "weighted_asr": 0.1293,
+        "total_attacked_value_usd": 14500000.0,
+        "compromised_value_usd": 1875000.0,
+        "n_failures": 24,
+        "n_records": 220
+      }
+    },
+    "SemanticSimilarity": {
+      "contract_renewal": {
+        "asr": 0.1929,
+        "weighted_asr": 0.1601,
+        "total_attacked_value_usd": 37000000.0,
+        "compromised_value_usd": 5925000.0,
+        "n_failures": 27,
+        "n_records": 140
+      },
+      "emergency_procurement": {
+        "asr": 0.175,
+        "weighted_asr": 0.2274,
+        "total_attacked_value_usd": 3100000.0,
+        "compromised_value_usd": 705000.0,
+        "n_failures": 14,
+        "n_records": 80
+      },
+      "invoice_approval": {
+        "asr": 0.1889,
+        "weighted_asr": 0.151,
+        "total_attacked_value_usd": 4800000.0,
+        "compromised_value_usd": 725000.0,
+        "n_failures": 34,
+        "n_records": 180
+      },
+      "logistics_partner_selection": {
+        "asr": 0.3917,
+        "weighted_asr": 0.3267,
+        "total_attacked_value_usd": 7500000.0,
+        "compromised_value_usd": 2450000.0,
+        "n_failures": 47,
+        "n_records": 120
+      },
+      "multi_tier_supplier_audit": {
+        "asr": 0.225,
+        "weighted_asr": 0.225,
+        "total_attacked_value_usd": 4000000.0,
+        "compromised_value_usd": 900000.0,
+        "n_failures": 9,
+        "n_records": 40
+      },
+      "quality_compliance": {
+        "asr": 0.4375,
+        "weighted_asr": 0.4,
+        "total_attacked_value_usd": 6500000.0,
+        "compromised_value_usd": 2600000.0,
+        "n_failures": 35,
+        "n_records": 80
+      },
+      "raw_material_sourcing": {
+        "asr": 0.175,
+        "weighted_asr": 0.115,
+        "total_attacked_value_usd": 5000000.0,
+        "compromised_value_usd": 575000.0,
+        "n_failures": 14,
+        "n_records": 80
+      },
+      "rfq_ranking": {
+        "asr": 0.2944,
+        "weighted_asr": 0.3581,
+        "total_attacked_value_usd": 9900000.0,
+        "compromised_value_usd": 3545000.0,
+        "n_failures": 53,
+        "n_records": 180
+      },
+      "supplier_risk_assessment": {
+        "asr": 0.3722,
+        "weighted_asr": 0.1516,
+        "total_attacked_value_usd": 61500000.0,
+        "compromised_value_usd": 9325000.0,
+        "n_failures": 67,
+        "n_records": 180
+      },
+      "vendor_selection": {
+        "asr": 0.15,
+        "weighted_asr": 0.181,
+        "total_attacked_value_usd": 14500000.0,
+        "compromised_value_usd": 2625000.0,
+        "n_failures": 33,
+        "n_records": 220
+      }
+    },
+    "DefenseChain": {
+      "contract_renewal": {
+        "asr": 0.1143,
+        "weighted_asr": 0.1054,
+        "total_attacked_value_usd": 37000000.0,
+        "compromised_value_usd": 3900000.0,
+        "n_failures": 16,
+        "n_records": 140
+      },
+      "emergency_procurement": {
+        "asr": 0.1125,
+        "weighted_asr": 0.1694,
+        "total_attacked_value_usd": 3100000.0,
+        "compromised_value_usd": 525000.0,
+        "n_failures": 9,
+        "n_records": 80
+      },
+      "invoice_approval": {
+        "asr": 0.0722,
+        "weighted_asr": 0.0583,
+        "total_attacked_value_usd": 4800000.0,
+        "compromised_value_usd": 280000.0,
+        "n_failures": 13,
+        "n_records": 180
+      },
+      "logistics_partner_selection": {
+        "asr": 0.175,
+        "weighted_asr": 0.15,
+        "total_attacked_value_usd": 7500000.0,
+        "compromised_value_usd": 1125000.0,
+        "n_failures": 21,
+        "n_records": 120
+      },
+      "multi_tier_supplier_audit": {
+        "asr": 0.125,
+        "weighted_asr": 0.125,
+        "total_attacked_value_usd": 4000000.0,
+        "compromised_value_usd": 500000.0,
+        "n_failures": 5,
+        "n_records": 40
+      },
+      "quality_compliance": {
+        "asr": 0.2375,
+        "weighted_asr": 0.2231,
+        "total_attacked_value_usd": 6500000.0,
+        "compromised_value_usd": 1450000.0,
+        "n_failures": 19,
+        "n_records": 80
+      },
+      "raw_material_sourcing": {
+        "asr": 0.1,
+        "weighted_asr": 0.085,
+        "total_attacked_value_usd": 5000000.0,
+        "compromised_value_usd": 425000.0,
+        "n_failures": 8,
+        "n_records": 80
+      },
+      "rfq_ranking": {
+        "asr": 0.1556,
+        "weighted_asr": 0.1768,
+        "total_attacked_value_usd": 9900000.0,
+        "compromised_value_usd": 1750000.0,
+        "n_failures": 28,
+        "n_records": 180
+      },
+      "supplier_risk_assessment": {
+        "asr": 0.1667,
+        "weighted_asr": 0.0756,
+        "total_attacked_value_usd": 61500000.0,
+        "compromised_value_usd": 4650000.0,
+        "n_failures": 30,
+        "n_records": 180
+      },
+      "vendor_selection": {
+        "asr": 0.0636,
+        "weighted_asr": 0.0707,
+        "total_attacked_value_usd": 14500000.0,
+        "compromised_value_usd": 1025000.0,
+        "n_failures": 14,
+        "n_records": 220
+      }
+    }
+  },
+  "scenario_weights_usd": {
+    "S001": 100000.0,
+    "S002": 25000.0,
+    "S003": 70000.0,
+    "S004": 2500000.0,
+    "S005": 100000.0,
+    "S006": 100000.0,
+    "S007": 25000.0,
+    "S008": 100000.0,
+    "S009": 100000.0,
+    "S010": 25000.0,
+    "S011": 100000.0,
+    "S012": 25000.0,
+    "S013": 25000.0,
+    "S014": 25000.0,
+    "S015": 100000.0,
+    "S016": 25000.0,
+    "S017": 25000.0,
+    "S018": 100000.0,
+    "S019": 25000.0,
+    "S020": 5000.0,
+    "S021": 5000.0,
+    "S022": 25000.0,
+    "S023": 5000.0,
+    "S024": 25000.0,
+    "S025": 25000.0,
+    "S026": 25000.0,
+    "S027": 100000.0,
+    "S028": 25000.0,
+    "S029": 25000.0,
+    "S030": 100000.0,
+    "S031": 100000.0,
+    "S032": 100000.0,
+    "S033": 100000.0,
+    "S034": 25000.0,
+    "S035": 25000.0,
+    "S036": 100000.0,
+    "S037": 100000.0,
+    "S038": 25000.0,
+    "S039": 100000.0,
+    "S040": 100000.0,
+    "S041": 100000.0,
+    "S042": 100000.0,
+    "S043": 25000.0,
+    "S044": 25000.0,
+    "S045": 1400000.0,
+    "S046": 25000.0,
+    "S047": 25000.0,
+    "S048": 100000.0,
+    "S049": 100000.0,
+    "S050": 100000.0,
+    "S051": 25000.0,
+    "S052": 100000.0,
+    "S053": 25000.0,
+    "S054": 25000.0,
+    "S055": 100000.0,
+    "S056": 100000.0,
+    "S057": 100000.0,
+    "S058": 100000.0,
+    "S059": 25000.0,
+    "S060": 100000.0,
+    "S061": 25000.0,
+    "S062": 25000.0,
+    "S063": 5000.0,
+    "S064": 100000.0,
+    "S065": 100000.0
+  },
+  "runtime_s": 4.23
+}
