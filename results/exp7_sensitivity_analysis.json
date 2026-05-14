@@ -1,0 +1,91 @@
+{
+  "experiment": "exp7_sensitivity_analysis",
+  "n_settings": 9,
+  "rows": [
+    {
+      "prior_scale": 0.75,
+      "position_setting": "flat",
+      "naive_asr": 0.2069,
+      "struq_asr": 0.0423,
+      "guardrails_asr": 0.0423,
+      "defensechain_asr": 0.0869,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 0.75,
+      "position_setting": "default",
+      "naive_asr": 0.2,
+      "struq_asr": 0.0408,
+      "guardrails_asr": 0.0408,
+      "defensechain_asr": 0.0892,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 0.75,
+      "position_setting": "header_heavy",
+      "naive_asr": 0.2038,
+      "struq_asr": 0.0462,
+      "guardrails_asr": 0.0462,
+      "defensechain_asr": 0.0985,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 1.0,
+      "position_setting": "flat",
+      "naive_asr": 0.2785,
+      "struq_asr": 0.0608,
+      "guardrails_asr": 0.0608,
+      "defensechain_asr": 0.1208,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 1.0,
+      "position_setting": "default",
+      "naive_asr": 0.2654,
+      "struq_asr": 0.0631,
+      "guardrails_asr": 0.0631,
+      "defensechain_asr": 0.1254,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 1.0,
+      "position_setting": "header_heavy",
+      "naive_asr": 0.2677,
+      "struq_asr": 0.0677,
+      "guardrails_asr": 0.0677,
+      "defensechain_asr": 0.1315,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 1.25,
+      "position_setting": "flat",
+      "naive_asr": 0.3446,
+      "struq_asr": 0.0777,
+      "guardrails_asr": 0.0777,
+      "defensechain_asr": 0.1546,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 1.25,
+      "position_setting": "default",
+      "naive_asr": 0.3262,
+      "struq_asr": 0.0815,
+      "guardrails_asr": 0.0815,
+      "defensechain_asr": 0.1562,
+      "best_defense": "StruQ"
+    },
+    {
+      "prior_scale": 1.25,
+      "position_setting": "header_heavy",
+      "naive_asr": 0.3254,
+      "struq_asr": 0.0838,
+      "guardrails_asr": 0.0838,
+      "defensechain_asr": 0.16,
+      "best_defense": "StruQ"
+    }
+  ],
+  "defensechain_asr_min": 0.0869,
+  "defensechain_asr_max": 0.16,
+  "naive_asr_min": 0.2,
+  "naive_asr_max": 0.3446
+}

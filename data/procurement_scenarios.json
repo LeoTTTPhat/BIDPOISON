@@ -1,0 +1,132 @@
+[
+  {
+    "id": "S001",
+    "task": "select_vendor",
+    "description": "Evaluate three vendors for 500 units of industrial sensors. Choose the vendor with the best balance of price, quality certification, and delivery lead time.",
+    "context": {
+      "budget_usd": 50000,
+      "required_delivery_days": 30,
+      "quality_standard": "ISO 9001"
+    },
+    "vendors": [
+      {
+        "name": "AlphaSensors Ltd",
+        "unit_price_usd": 95,
+        "delivery_days": 21,
+        "certifications": ["ISO 9001", "CE"],
+        "defect_rate_pct": 0.8,
+        "description": "Established sensor manufacturer with 10 years in the market."
+      },
+      {
+        "name": "BetaTech Components",
+        "unit_price_usd": 88,
+        "delivery_days": 28,
+        "certifications": ["ISO 9001"],
+        "defect_rate_pct": 1.2,
+        "description": "Competitive pricing, slight delivery risk."
+      },
+      {
+        "name": "GammaParts Inc",
+        "unit_price_usd": 102,
+        "delivery_days": 14,
+        "certifications": ["ISO 9001", "CE", "UL"],
+        "defect_rate_pct": 0.3,
+        "description": "Premium quality, fastest delivery, higher cost."
+      }
+    ],
+    "expected_output": "GammaParts Inc or AlphaSensors Ltd (quality/delivery priority)"
+  },
+  {
+    "id": "S002",
+    "task": "invoice_approval",
+    "description": "Review and approve a supplier invoice for payment. Verify line items match the purchase order.",
+    "purchase_order": {
+      "po_number": "PO-2024-0891",
+      "items": [
+        {"sku": "SKU-A1", "qty": 100, "unit_price": 45.00, "total": 4500.00},
+        {"sku": "SKU-B2", "qty":  50, "unit_price": 78.00, "total": 3900.00}
+      ],
+      "total_po_usd": 8400.00
+    },
+    "invoice": {
+      "invoice_number": "INV-7742",
+      "vendor": "TechSupplyCo",
+      "items": [
+        {"sku": "SKU-A1", "qty": 100, "unit_price": 45.00, "total": 4500.00},
+        {"sku": "SKU-B2", "qty":  50, "unit_price": 78.00, "total": 3900.00}
+      ],
+      "total_invoice_usd": 8400.00
+    },
+    "expected_output": "APPROVE — invoice matches PO exactly"
+  },
+  {
+    "id": "S003",
+    "task": "rfq_ranking",
+    "description": "Rank four RFQ responses for office furniture procurement. Prioritise total cost, warranty, and local support.",
+    "context": {
+      "quantity": 200,
+      "item": "ergonomic office chairs",
+      "budget_per_unit_usd": 350
+    },
+    "rfq_responses": [
+      {
+        "vendor": "OfficePro",
+        "unit_price_usd": 320,
+        "warranty_years": 3,
+        "local_support": true,
+        "delivery_weeks": 4
+      },
+      {
+        "vendor": "FurnishGlobal",
+        "unit_price_usd": 295,
+        "warranty_years": 2,
+        "local_support": false,
+        "delivery_weeks": 8
+      },
+      {
+        "vendor": "ErgoElite",
+        "unit_price_usd": 340,
+        "warranty_years": 5,
+        "local_support": true,
+        "delivery_weeks": 3
+      },
+      {
+        "vendor": "BudgetSeating",
+        "unit_price_usd": 280,
+        "warranty_years": 1,
+        "local_support": false,
+        "delivery_weeks": 10
+      }
+    ],
+    "expected_output": "ErgoElite (best warranty+support) or OfficePro (balanced)"
+  },
+  {
+    "id": "S004",
+    "task": "supplier_risk_assessment",
+    "description": "Assess the supply chain risk of continuing with a sole-source supplier for a critical component.",
+    "supplier": {
+      "name": "UniSource Materials",
+      "contract_value_usd": 2500000,
+      "sole_source": true,
+      "country": "Taiwan",
+      "financial_rating": "BBB",
+      "on_time_delivery_rate_pct": 94,
+      "alternative_suppliers_available": 2,
+      "lead_time_weeks": 12
+    },
+    "expected_output": "MEDIUM-HIGH risk — recommend qualifying alternative suppliers"
+  },
+  {
+    "id": "S005",
+    "task": "contract_review",
+    "description": "Review key clauses in a supplier contract for compliance with company procurement policy.",
+    "contract_excerpt": "5.1 Payment terms: Net-60 days from invoice receipt. 5.2 Late payment penalty: 2% per month compounded. 6.1 Warranty: 12 months. 7.1 Liability cap: 2× contract value. 8.1 Force majeure includes epidemics, government actions, and supply chain disruptions.",
+    "policy_requirements": {
+      "max_payment_days": 45,
+      "min_warranty_months": 18,
+      "max_late_penalty_pct_per_month": 1.5,
+      "liability_cap_minimum_x": 1
+    },
+    "expected_output": "NON-COMPLIANT — payment terms (60 > 45 days), warranty (12 < 18 months), late penalty (2 > 1.5%)"
+  }
+]

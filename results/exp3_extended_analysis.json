@@ -1,0 +1,370 @@
+{
+  "experiment": "exp3_extended_analysis",
+  "n_scenarios": 65,
+  "n_outcomes": 1300,
+  "model_profile": "ensemble",
+  "bootstrap_n": 1000,
+  "bootstrap_ci_by_attack_type": {
+    "T1_naive": {
+      "mean": 0.14615384615384616,
+      "ci_lower": 0.10384615384615385,
+      "ci_upper": 0.19230769230769232,
+      "std": 0.353260384714001,
+      "n": 260
+    },
+    "T2_context_manip": {
+      "mean": 0.23461538461538461,
+      "ci_lower": 0.18461538461538463,
+      "ci_upper": 0.2923076923076923,
+      "std": 0.42375819274340853,
+      "n": 260
+    },
+    "T3_role_hijack": {
+      "mean": 0.45,
+      "ci_lower": 0.38461538461538464,
+      "ci_upper": 0.5076923076923077,
+      "std": 0.49749371855331004,
+      "n": 260
+    },
+    "T4_completion_attack": {
+      "mean": 0.16923076923076924,
+      "ci_lower": 0.12307692307692308,
+      "ci_upper": 0.2153846153846154,
+      "std": 0.3749556186755058,
+      "n": 260
+    },
+    "T5_gcg_style": {
+      "mean": 0.3269230769230769,
+      "ci_lower": 0.27307692307692305,
+      "ci_upper": 0.38461538461538464,
+      "std": 0.469088881448095,
+      "n": 260
+    }
+  },
+  "position_heatmap": {
+    "T1_naive": {
+      "header": 0.2308,
+      "footer": 0.1385,
+      "inline_comment": 0.1231,
+      "metadata_field": 0.0923
+    },
+    "T2_context_manip": {
+      "header": 0.3077,
+      "footer": 0.2615,
+      "inline_comment": 0.2154,
+      "metadata_field": 0.1538
+    },
+    "T3_role_hijack": {
+      "header": 0.6462,
+      "footer": 0.3846,
+      "inline_comment": 0.3538,
+      "metadata_field": 0.4154
+    },
+    "T4_completion_attack": {
+      "header": 0.2,
+      "footer": 0.2154,
+      "inline_comment": 0.1385,
+      "metadata_field": 0.1231
+    },
+    "T5_gcg_style": {
+      "header": 0.4308,
+      "footer": 0.3077,
+      "inline_comment": 0.2769,
+      "metadata_field": 0.2923
+    }
+  },
+  "sensitivity_analysis": {
+    "high": {
+      "asr": 0.2672,
+      "n": 640,
+      "ci": {
+        "mean": 0.2671875,
+        "ci_lower": 0.23125,
+        "ci_upper": 0.3046875,
+        "std": 0.44249106188006776,
+        "n": 640
+      }
+    },
+    "medium": {
+      "asr": 0.281,
+      "n": 580,
+      "ci": {
+        "mean": 0.2810344827586207,
+        "ci_lower": 0.24310344827586206,
+        "ci_upper": 0.31551724137931036,
+        "std": 0.44950428502875833,
+        "n": 580
+      }
+    },
+    "low": {
+      "asr": 0.1375,
+      "n": 80,
+      "ci": {
+        "mean": 0.1375,
+        "ci_lower": 0.0625,
+        "ci_upper": 0.2128124999999997,
+        "std": 0.3443744328488978,
+        "n": 80
+      }
+    }
+  },
+  "category_breakdown": {
+    "contract_renewal": {
+      "asr": 0.1929,
+      "n": 140,
+      "n_scenarios": 7
+    },
+    "emergency_procurement": {
+      "asr": 0.2,
+      "n": 80,
+      "n_scenarios": 4
+    },
+    "invoice_approval": {
+      "asr": 0.1889,
+      "n": 180,
+      "n_scenarios": 9
+    },
+    "logistics_partner_selection": {
+      "asr": 0.3917,
+      "n": 120,
+      "n_scenarios": 6
+    },
+    "multi_tier_supplier_audit": {
+      "asr": 0.275,
+      "n": 40,
+      "n_scenarios": 2
+    },
+    "quality_compliance": {
+      "asr": 0.525,
+      "n": 80,
+      "n_scenarios": 4
+    },
+    "raw_material_sourcing": {
+      "asr": 0.175,
+      "n": 80,
+      "n_scenarios": 4
+    },
+    "rfq_ranking": {
+      "asr": 0.3,
+      "n": 180,
+      "n_scenarios": 9
+    },
+    "supplier_risk_assessment": {
+      "asr": 0.3722,
+      "n": 180,
+      "n_scenarios": 9
+    },
+    "vendor_selection": {
+      "asr": 0.15,
+      "n": 220,
+      "n_scenarios": 11
+    }
+  },
+  "defense_comparison": {
+    "OutputValidation": {
+      "defense_name": "OutputValidation",
+      "overall_dsr": 0.7346,
+      "overall_asr": 0.2654,
+      "false_positive_rate": 0.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.2346,
+          "dsr": 0.7654,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.45,
+          "dsr": 0.55,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1692,
+          "dsr": 0.8308,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.3269,
+          "dsr": 0.6731,
+          "n": 260
+        }
+      }
+    },
+    "SemanticSimilarity": {
+      "defense_name": "SemanticSimilarity",
+      "overall_dsr": 0.7346,
+      "overall_asr": 0.2654,
+      "false_positive_rate": 0.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.2346,
+          "dsr": 0.7654,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.45,
+          "dsr": 0.55,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1692,
+          "dsr": 0.8308,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.3269,
+          "dsr": 0.6731,
+          "n": 260
+        }
+      }
+    },
+    "InputSanitization": {
+      "defense_name": "InputSanitization",
+      "overall_dsr": 0.8415,
+      "overall_asr": 0.1585,
+      "false_positive_rate": 0.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.3615,
+          "dsr": 0.6385,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "n": 260
+        }
+      }
+    },
+    "DefenseChain": {
+      "defense_name": "DefenseChain",
+      "overall_dsr": 0.8446,
+      "overall_asr": 0.1554,
+      "false_positive_rate": 0.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1038,
+          "dsr": 0.8962,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1769,
+          "dsr": 0.8231,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.3615,
+          "dsr": 0.6385,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "n": 260
+        }
+      }
+    }
+  },
+  "summary_table": [
+    {
+      "attack_type": "T1_naive",
+      "asr_mean": 0.1462,
+      "ci_lower": 0.1038,
+      "ci_upper": 0.1923,
+      "std": 0.3533,
+      "n": 260,
+      "by_position": {
+        "header": 0.2308,
+        "footer": 0.1385,
+        "inline_comment": 0.1231,
+        "metadata_field": 0.0923
+      }
+    },
+    {
+      "attack_type": "T2_context_manip",
+      "asr_mean": 0.2346,
+      "ci_lower": 0.1846,
+      "ci_upper": 0.2923,
+      "std": 0.4238,
+      "n": 260,
+      "by_position": {
+        "header": 0.3077,
+        "footer": 0.2615,
+        "inline_comment": 0.2154,
+        "metadata_field": 0.1538
+      }
+    },
+    {
+      "attack_type": "T3_role_hijack",
+      "asr_mean": 0.45,
+      "ci_lower": 0.3846,
+      "ci_upper": 0.5077,
+      "std": 0.4975,
+      "n": 260,
+      "by_position": {
+        "header": 0.6462,
+        "footer": 0.3846,
+        "inline_comment": 0.3538,
+        "metadata_field": 0.4154
+      }
+    },
+    {
+      "attack_type": "T4_completion_attack",
+      "asr_mean": 0.1692,
+      "ci_lower": 0.1231,
+      "ci_upper": 0.2154,
+      "std": 0.375,
+      "n": 260,
+      "by_position": {
+        "header": 0.2,
+        "footer": 0.2154,
+        "inline_comment": 0.1385,
+        "metadata_field": 0.1231
+      }
+    },
+    {
+      "attack_type": "T5_gcg_style",
+      "asr_mean": 0.3269,
+      "ci_lower": 0.2731,
+      "ci_upper": 0.3846,
+      "std": 0.4691,
+      "n": 260,
+      "by_position": {
+        "header": 0.4308,
+        "footer": 0.3077,
+        "inline_comment": 0.2769,
+        "metadata_field": 0.2923
+      }
+    }
+  ],
+  "runtime_s": 4.2
+}

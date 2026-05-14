@@ -1,0 +1,319 @@
+{
+  "experiment": "exp4_defense_comparison",
+  "n_scenarios": 65,
+  "n_records": 1300,
+  "model_profile": "ensemble",
+  "defense_results": {
+    "Naive": {
+      "defense_name": "Naive",
+      "overall_asr": 0.2654,
+      "overall_dsr": 0.0,
+      "sdr": 0.0,
+      "fpr": 0.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.1462,
+          "sdr": 0.1462,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.2346,
+          "dsr": 0.2346,
+          "sdr": 0.2346,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.45,
+          "dsr": 0.45,
+          "sdr": 0.45,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1692,
+          "dsr": 0.1692,
+          "sdr": 0.1692,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.3269,
+          "dsr": 0.3269,
+          "sdr": 0.3269,
+          "n": 260
+        }
+      },
+      "dc": 1.0
+    },
+    "StruQ": {
+      "defense_name": "StruQ",
+      "overall_asr": 0.0631,
+      "overall_dsr": 0.9369,
+      "sdr": 0.6,
+      "fpr": 0.0,
+      "dc": 1.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        }
+      }
+    },
+    "GuardrailsPolicy": {
+      "defense_name": "GuardrailsPolicy",
+      "overall_asr": 0.0631,
+      "overall_dsr": 0.9369,
+      "sdr": 0.6,
+      "fpr": 0.0,
+      "dc": 1.0,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1808,
+          "dsr": 0.8192,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1346,
+          "dsr": 0.8654,
+          "sdr": 0.0,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        }
+      }
+    },
+    "OutputValidation": {
+      "defense_name": "OutputValidation",
+      "overall_asr": 0.2215,
+      "overall_dsr": 0.7785,
+      "sdr": 0.0485,
+      "fpr": 0.0154,
+      "dc": 0.9846,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1154,
+          "dsr": 0.8846,
+          "sdr": 0.0385,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1962,
+          "dsr": 0.8038,
+          "sdr": 0.0423,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.3731,
+          "dsr": 0.6269,
+          "sdr": 0.0808,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0308,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.2769,
+          "dsr": 0.7231,
+          "sdr": 0.05,
+          "n": 260
+        }
+      }
+    },
+    "SemanticSimilarity": {
+      "defense_name": "SemanticSimilarity",
+      "overall_asr": 0.2562,
+      "overall_dsr": 0.7438,
+      "sdr": 0.0415,
+      "fpr": 0.0308,
+      "dc": 0.9692,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.0115,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.2269,
+          "dsr": 0.7731,
+          "sdr": 0.0731,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.4269,
+          "dsr": 0.5731,
+          "sdr": 0.0462,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1577,
+          "dsr": 0.8423,
+          "sdr": 0.0462,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.3231,
+          "dsr": 0.6769,
+          "sdr": 0.0308,
+          "n": 260
+        }
+      }
+    },
+    "DefenseChain": {
+      "defense_name": "DefenseChain",
+      "overall_asr": 0.1254,
+      "overall_dsr": 0.8746,
+      "sdr": 0.4577,
+      "fpr": 0.0308,
+      "dc": 0.9692,
+      "by_attack_type": {
+        "T1_naive": {
+          "asr": 0.0923,
+          "dsr": 0.9077,
+          "sdr": 0.2885,
+          "n": 260
+        },
+        "T2_context_manip": {
+          "asr": 0.1462,
+          "dsr": 0.8538,
+          "sdr": 0.3385,
+          "n": 260
+        },
+        "T3_role_hijack": {
+          "asr": 0.2769,
+          "dsr": 0.7231,
+          "sdr": 0.3538,
+          "n": 260
+        },
+        "T4_completion_attack": {
+          "asr": 0.1115,
+          "dsr": 0.8885,
+          "sdr": 0.3077,
+          "n": 260
+        },
+        "T5_gcg_style": {
+          "asr": 0.0,
+          "dsr": 1.0,
+          "sdr": 1.0,
+          "n": 260
+        }
+      }
+    }
+  },
+  "statistical_tests": {
+    "StruQ": {
+      "t_statistic": 10.4904,
+      "p_value": 0.0,
+      "significant_005": true,
+      "significant_001": true,
+      "mean_asr_reduction": 0.2023
+    },
+    "GuardrailsPolicy": {
+      "t_statistic": 10.4904,
+      "p_value": 0.0,
+      "significant_005": true,
+      "significant_001": true,
+      "mean_asr_reduction": 0.2023
+    },
+    "OutputValidation": {
+      "t_statistic": 3.1373,
+      "p_value": 0.001705,
+      "significant_005": true,
+      "significant_001": true,
+      "mean_asr_reduction": 0.0438
+    },
+    "SemanticSimilarity": {
+      "t_statistic": 1.5943,
+      "p_value": 0.110879,
+      "significant_005": false,
+      "significant_001": false,
+      "mean_asr_reduction": 0.0092
+    },
+    "DefenseChain": {
+      "t_statistic": 7.6152,
+      "p_value": 0.0,
+      "significant_005": true,
+      "significant_001": true,
+      "mean_asr_reduction": 0.14
+    }
+  },
+  "bootstrap_cis": {
+    "Naive": {
+      "mean": 0.2654,
+      "ci_lower": 0.2415,
+      "ci_upper": 0.2908
+    },
+    "StruQ": {
+      "mean": 0.0631,
+      "ci_lower": 0.0492,
+      "ci_upper": 0.0769
+    },
+    "GuardrailsPolicy": {
+      "mean": 0.0631,
+      "ci_lower": 0.05,
+      "ci_upper": 0.0777
+    },
+    "OutputValidation": {
+      "mean": 0.2215,
+      "ci_lower": 0.2007,
+      "ci_upper": 0.2439
+    },
+    "SemanticSimilarity": {
+      "mean": 0.2562,
+      "ci_lower": 0.2338,
+      "ci_upper": 0.28
+    },
+    "DefenseChain": {
+      "mean": 0.1254,
+      "ci_lower": 0.1069,
+      "ci_upper": 0.1423
+    }
+  },
+  "latex_table": "\\begin{table}[htbp]\n\\centering\n\\caption{Defense Comparison: ASR, DSR, SDR, FPR, DC (ensemble LLM, 60 scenarios)}\n\\label{tab:defense_comparison}\n\\begin{tabular}{lccccccc}\n\\hline\n\\textbf{Defense} & \\textbf{ASR} & \\textbf{DSR} & \\textbf{SDR} & \\textbf{FPR} & \\textbf{DC} & \\textbf{$p$-value} & \\textbf{Sig.} \\\\\n\\hline\nNaive & 0.265 & 0.000 & 0.000 & 0.000 & 1.000 & - & - \\\\\nStruQ & 0.063 & 0.937 & 0.600 & 0.000 & 1.000 & 0.0000 & *** \\\\\nGuardrailsPolicy & 0.063 & 0.937 & 0.600 & 0.000 & 1.000 & 0.0000 & *** \\\\\nOutputValidation & 0.222 & 0.778 & 0.049 & 0.015 & 0.985 & 0.0017 & *** \\\\\nSemanticSimilarity & 0.256 & 0.744 & 0.042 & 0.031 & 0.969 & 0.1109 & - \\\\\nDefenseChain & 0.125 & 0.875 & 0.458 & 0.031 & 0.969 & 0.0000 & *** \\\\\n\\hline\n\\multicolumn{8}{l}{\\small * $p < 0.05$; *** $p < 0.01$} \\\\\n\\end{tabular}\n\\end{table}",
+  "runtime_s": 3.14
+}

@@ -1,0 +1,33 @@
+{
+  "schema_validation_note": "Lightweight grounding of BidPoison fields against public procurement/e-invoicing schemas. This is not a full conformance test.",
+  "sources": [
+    {
+      "name": "Peppol BIS Billing 3.0",
+      "url": "https://docs.peppol.eu/poacc/billing/3.0/",
+      "use": "Invoice verification, auditing, payment, buyer references, invoice line descriptions, attached documents"
+    },
+    {
+      "name": "OASIS Universal Business Language 2.1",
+      "url": "https://docs.oasis-open.org/ubl/UBL-2.1.html",
+      "use": "Invoice and Order document models, XML schema-based business document validation"
+    }
+  ],
+  "bidpoison_to_schema_fields": {
+    "po_number": ["Peppol buyer reference", "UBL OrderReference"],
+    "invoice_number": ["Peppol invoice identifier", "UBL Invoice ID"],
+    "invoice_vendor": ["Peppol seller party", "UBL AccountingSupplierParty"],
+    "invoice_total_usd": ["Peppol invoice total", "UBL LegalMonetaryTotal"],
+    "invoice_items": ["Peppol invoice lines", "UBL InvoiceLine"],
+    "po_items": ["UBL OrderLine"],
+    "contract_excerpt": ["Peppol contract reference", "UBL ContractDocumentReference"],
+    "certifications": ["UBL item/property descriptors"],
+    "description": ["Peppol/UBL line item descriptions"],
+    "attachment_or_note": ["Peppol attached documents", "UBL AdditionalDocumentReference"]
+  },
+  "coverage_claim": {
+    "invoice_approval": "Grounded in Peppol/UBL invoice, buyer reference, seller party, monetary total, and invoice line concepts.",
+    "contract_renewal": "Partially grounded in contract/document reference concepts; clauses remain synthetic text.",
+    "vendor_selection": "Partially grounded in item and party descriptors; RFQ scoring fields are benchmark-specific.",
+    "supplier_risk_assessment": "Benchmark-specific risk fields, not directly covered by invoice schemas."
+  }
+}

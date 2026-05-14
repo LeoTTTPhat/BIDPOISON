@@ -1,0 +1,140 @@
+{
+  "exp1": {
+    "n_attack_runs": 100,
+    "n_clean_runs": 5,
+    "asr_naive": 0.17,
+    "asr_struq": 0.13,
+    "dsr_struq": 0.87,
+    "sdr_struq": 0.6,
+    "false_positive_rate": 0.0,
+    "decision_consistency": 1.0,
+    "by_attack_type": {
+      "T4_completion_attack": {
+        "n": 20,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 0.0
+      },
+      "T5_gcg_style": {
+        "n": 20,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 1.0
+      },
+      "T3_role_hijack": {
+        "n": 20,
+        "asr_naive": 0.85,
+        "dsr_struq": 0.35,
+        "sdr_struq": 1.0
+      },
+      "T1_naive": {
+        "n": 20,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 1.0
+      },
+      "T2_context_manip": {
+        "n": 20,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 0.0
+      }
+    }
+  },
+  "exp2": {
+    "n_attack_runs": 200,
+    "n_clean_runs": 5,
+    "asr_naive": 0.17,
+    "asr_struq": 0.065,
+    "dsr_struq": 0.935,
+    "sdr_struq": 0.5,
+    "false_positive_rate": 0.0,
+    "decision_consistency": 1.0,
+    "by_attack_type": {
+      "T4_completion_attack": {
+        "n": 40,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 0.0
+      },
+      "T5_gcg_style": {
+        "n": 40,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 1.0
+      },
+      "T3_role_hijack": {
+        "n": 40,
+        "asr_naive": 0.425,
+        "dsr_struq": 0.675,
+        "sdr_struq": 0.5
+      },
+      "T1_naive": {
+        "n": 40,
+        "asr_naive": 0.425,
+        "dsr_struq": 1.0,
+        "sdr_struq": 1.0
+      },
+      "T2_context_manip": {
+        "n": 40,
+        "asr_naive": 0.0,
+        "dsr_struq": 1.0,
+        "sdr_struq": 0.0
+      }
+    }
+  },
+  "exp3_summary": {
+    "n_scenarios": 65,
+    "model_profile": "ensemble",
+    "best_attack": "T3_role_hijack",
+    "best_attack_asr": 0.45,
+    "sensitivity": {
+      "high": {
+        "asr": 0.2672,
+        "n": 640,
+        "ci": {
+          "mean": 0.2671875,
+          "ci_lower": 0.23125,
+          "ci_upper": 0.3046875,
+          "std": 0.44249106188006776,
+          "n": 640
+        }
+      },
+      "medium": {
+        "asr": 0.281,
+        "n": 580,
+        "ci": {
+          "mean": 0.2810344827586207,
+          "ci_lower": 0.24310344827586206,
+          "ci_upper": 0.31551724137931036,
+          "std": 0.44950428502875833,
+          "n": 580
+        }
+      },
+      "low": {
+        "asr": 0.1375,
+        "n": 80,
+        "ci": {
+          "mean": 0.1375,
+          "ci_lower": 0.0625,
+          "ci_upper": 0.2128124999999997,
+          "std": 0.3443744328488978,
+          "n": 80
+        }
+      }
+    }
+  },
+  "exp4_summary": {
+    "n_scenarios": 65,
+    "best_defense": "StruQ",
+    "best_defense_dsr": 0.9369,
+    "vuln_score": 0.2654,
+    "defense_asr": {
+      "Naive": 0.2654,
+      "StruQ": 0.18,
+      "OutputValidation": 0.2215,
+      "SemanticSimilarity": 0.2654,
+      "DefenseChain": 0.1285
+    }
+  }
+}
