@@ -168,7 +168,9 @@ def main():
             "policy_chain",
             "input_sanitization",
             "llm_judge",
+            "llama_guard",
             "provenance_oracle",
+            "strict_tool_call",
         ],
     )
     parser.add_argument("--limit", type=int, default=5)

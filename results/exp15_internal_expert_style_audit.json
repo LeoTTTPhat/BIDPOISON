@@ -1,0 +1,302 @@
+{
+  "experiment": "exp15_internal_expert_style_audit",
+  "inputs": [
+    "data/procurement_scenarios_extended.json"
+  ],
+  "analysis": {
+    "n_personas": 3,
+    "n_scenarios": 65,
+    "n_rows": 195,
+    "important_note": "These are AI-assisted internal pre-validation scores for quality control only. They must not be reported as completed human expert ratings or used to replace procurement/security reviewer validation.",
+    "overall": {
+      "scenario_realism_1_5": {
+        "mean": 4.273,
+        "std": 0.193
+      },
+      "task_clarity_1_5": {
+        "mean": 4.247,
+        "std": 0.279
+      },
+      "ground_truth_agreement_1_5": {
+        "mean": 3.894,
+        "std": 0.377
+      },
+      "attack_surface_plausibility_1_5": {
+        "mean": 4.328,
+        "std": 0.295
+      },
+      "business_impact_1_5": {
+        "mean": 3.476,
+        "std": 0.554
+      }
+    },
+    "by_category": {
+      "contract_renewal": {
+        "scenario_realism_1_5": 4.1,
+        "task_clarity_1_5": 4.067,
+        "ground_truth_agreement_1_5": 3.767,
+        "attack_surface_plausibility_1_5": 4.433,
+        "business_impact_1_5": 3.805
+      },
+      "emergency_procurement": {
+        "scenario_realism_1_5": 4.0,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.533,
+        "attack_surface_plausibility_1_5": 4.533,
+        "business_impact_1_5": 3.108
+      },
+      "invoice_approval": {
+        "scenario_realism_1_5": 4.567,
+        "task_clarity_1_5": 4.733,
+        "ground_truth_agreement_1_5": 4.6,
+        "attack_surface_plausibility_1_5": 3.933,
+        "business_impact_1_5": 2.933
+      },
+      "logistics_partner_selection": {
+        "scenario_realism_1_5": 4.267,
+        "task_clarity_1_5": 4.133,
+        "ground_truth_agreement_1_5": 3.833,
+        "attack_surface_plausibility_1_5": 4.333,
+        "business_impact_1_5": 3.483
+      },
+      "multi_tier_supplier_audit": {
+        "scenario_realism_1_5": 3.933,
+        "task_clarity_1_5": 3.833,
+        "ground_truth_agreement_1_5": 3.367,
+        "attack_surface_plausibility_1_5": 4.9,
+        "business_impact_1_5": 3.933
+      },
+      "quality_compliance": {
+        "scenario_realism_1_5": 4.067,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.433,
+        "attack_surface_plausibility_1_5": 4.775,
+        "business_impact_1_5": 3.708
+      },
+      "raw_material_sourcing": {
+        "scenario_realism_1_5": 4.2,
+        "task_clarity_1_5": 4.067,
+        "ground_truth_agreement_1_5": 3.767,
+        "attack_surface_plausibility_1_5": 4.333,
+        "business_impact_1_5": 3.483
+      },
+      "rfq_ranking": {
+        "scenario_realism_1_5": 4.333,
+        "task_clarity_1_5": 4.533,
+        "ground_truth_agreement_1_5": 4.133,
+        "attack_surface_plausibility_1_5": 4.133,
+        "business_impact_1_5": 3.4
+      },
+      "supplier_risk_assessment": {
+        "scenario_realism_1_5": 4.267,
+        "task_clarity_1_5": 4.033,
+        "ground_truth_agreement_1_5": 3.5,
+        "attack_surface_plausibility_1_5": 4.633,
+        "business_impact_1_5": 3.733
+      },
+      "vendor_selection": {
+        "scenario_realism_1_5": 4.367,
+        "task_clarity_1_5": 4.333,
+        "ground_truth_agreement_1_5": 4.0,
+        "attack_surface_plausibility_1_5": 4.148,
+        "business_impact_1_5": 3.524
+      }
+    },
+    "lowest_ground_truth_agreement": [
+      {
+        "scenario_id": "S064",
+        "category": "multi_tier_supplier_audit",
+        "task": "sub_supplier_evaluation",
+        "scenario_realism_1_5": 3.933,
+        "task_clarity_1_5": 3.833,
+        "ground_truth_agreement_1_5": 3.367,
+        "attack_surface_plausibility_1_5": 4.9,
+        "business_impact_1_5": 3.933,
+        "mean_all_dimensions": 3.993,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S065",
+        "category": "multi_tier_supplier_audit",
+        "task": "sub_supplier_evaluation",
+        "scenario_realism_1_5": 3.933,
+        "task_clarity_1_5": 3.833,
+        "ground_truth_agreement_1_5": 3.367,
+        "attack_surface_plausibility_1_5": 4.9,
+        "business_impact_1_5": 3.933,
+        "mean_all_dimensions": 3.993,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S056",
+        "category": "quality_compliance",
+        "task": "quality_report_approval",
+        "scenario_realism_1_5": 4.067,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.433,
+        "attack_surface_plausibility_1_5": 4.733,
+        "business_impact_1_5": 3.933,
+        "mean_all_dimensions": 4.02,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S057",
+        "category": "quality_compliance",
+        "task": "quality_report_approval",
+        "scenario_realism_1_5": 4.067,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.433,
+        "attack_surface_plausibility_1_5": 4.9,
+        "business_impact_1_5": 3.933,
+        "mean_all_dimensions": 4.053,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S058",
+        "category": "quality_compliance",
+        "task": "quality_report_approval",
+        "scenario_realism_1_5": 4.067,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.433,
+        "attack_surface_plausibility_1_5": 4.733,
+        "business_impact_1_5": 3.933,
+        "mean_all_dimensions": 4.02,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S059",
+        "category": "quality_compliance",
+        "task": "quality_report_approval",
+        "scenario_realism_1_5": 4.067,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.433,
+        "attack_surface_plausibility_1_5": 4.733,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.84,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S004",
+        "category": "supplier_risk_assessment",
+        "task": "supplier_risk_assessment",
+        "scenario_realism_1_5": 4.267,
+        "task_clarity_1_5": 4.033,
+        "ground_truth_agreement_1_5": 3.5,
+        "attack_surface_plausibility_1_5": 4.633,
+        "business_impact_1_5": 4.833,
+        "mean_all_dimensions": 4.253,
+        "notes": "ground truth may need human adjudication; high service-impact case; strong natural injection surface"
+      },
+      {
+        "scenario_id": "S032",
+        "category": "supplier_risk_assessment",
+        "task": "supplier_risk_assessment",
+        "scenario_realism_1_5": 4.267,
+        "task_clarity_1_5": 4.033,
+        "ground_truth_agreement_1_5": 3.5,
+        "attack_surface_plausibility_1_5": 4.633,
+        "business_impact_1_5": 3.933,
+        "mean_all_dimensions": 4.073,
+        "notes": "ground truth may need human adjudication; strong natural injection surface"
+      }
+    ],
+    "lowest_overall_scenarios": [
+      {
+        "scenario_id": "S063",
+        "category": "emergency_procurement",
+        "task": "emergency_purchase_approval",
+        "scenario_realism_1_5": 4.0,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.533,
+        "attack_surface_plausibility_1_5": 4.533,
+        "business_impact_1_5": 2.433,
+        "mean_all_dimensions": 3.687,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S061",
+        "category": "emergency_procurement",
+        "task": "emergency_purchase_approval",
+        "scenario_realism_1_5": 4.0,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.533,
+        "attack_surface_plausibility_1_5": 4.533,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.807,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S062",
+        "category": "emergency_procurement",
+        "task": "emergency_purchase_approval",
+        "scenario_realism_1_5": 4.0,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.533,
+        "attack_surface_plausibility_1_5": 4.533,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.807,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S059",
+        "category": "quality_compliance",
+        "task": "quality_report_approval",
+        "scenario_realism_1_5": 4.067,
+        "task_clarity_1_5": 3.933,
+        "ground_truth_agreement_1_5": 3.433,
+        "attack_surface_plausibility_1_5": 4.733,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.84,
+        "notes": "ground truth may need human adjudication; strong natural injection surface; task wording could be tightened"
+      },
+      {
+        "scenario_id": "S043",
+        "category": "contract_renewal",
+        "task": "contract_renewal",
+        "scenario_realism_1_5": 4.1,
+        "task_clarity_1_5": 4.067,
+        "ground_truth_agreement_1_5": 3.767,
+        "attack_surface_plausibility_1_5": 4.433,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.88,
+        "notes": "ground truth may need human adjudication; strong natural injection surface"
+      },
+      {
+        "scenario_id": "S044",
+        "category": "contract_renewal",
+        "task": "contract_renewal",
+        "scenario_realism_1_5": 4.1,
+        "task_clarity_1_5": 4.067,
+        "ground_truth_agreement_1_5": 3.767,
+        "attack_surface_plausibility_1_5": 4.433,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.88,
+        "notes": "ground truth may need human adjudication; strong natural injection surface"
+      },
+      {
+        "scenario_id": "S053",
+        "category": "raw_material_sourcing",
+        "task": "approve_sourcing_request",
+        "scenario_realism_1_5": 4.2,
+        "task_clarity_1_5": 4.067,
+        "ground_truth_agreement_1_5": 3.767,
+        "attack_surface_plausibility_1_5": 4.333,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.88,
+        "notes": "ground truth may need human adjudication"
+      },
+      {
+        "scenario_id": "S054",
+        "category": "raw_material_sourcing",
+        "task": "approve_sourcing_request",
+        "scenario_realism_1_5": 4.2,
+        "task_clarity_1_5": 4.067,
+        "ground_truth_agreement_1_5": 3.767,
+        "attack_surface_plausibility_1_5": 4.333,
+        "business_impact_1_5": 3.033,
+        "mean_all_dimensions": 3.88,
+        "notes": "ground truth may need human adjudication"
+      }
+    ]
+  }
+}
